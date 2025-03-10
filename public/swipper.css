@@ -1,0 +1,64 @@
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+.collection {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    background-color: red;
+  }
+  .collection .content {
+    height: 32rem;
+    width: 25rem;
+    background-color: #1b1f2a;
+    border: 0.2rem solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.7rem;
+    border-bottom: 0.4rem solid #0099ff;
+    border-top: 0.4rem solid #0099ff;
+    overflow: hidden;
+    padding-bottom: 20px;
+    background-color: green;
+  }
+
+  .content img {
+    width: 100%;
+    border-bottom-left-radius: 0.6rem;
+    border-bottom-right-radius: 0.6rem;
+  }
+  .text-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .text-content h3 {
+    padding: 0;
+    margin: 0;
+    font-size: 1.7rem;
+    font-weight: 500;
+    font-family: "poppins";
+  }
+  .text-content p {
+    max-width: 22rem;
+    font-size: 0.8rem;
+    font-weight: 400;
+    text-align: center;
+    font-family: "poppins";
+    color: white;
+  }
+  .btn {
+    background-color: #0099ff;
+    padding: 0.4rem;
+    border: 2px solid #0099ff;
+    outline: none;
+    font-size: 0.8rem;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+    cursor: pointer;
+    text-decoration: none;
+  }

@@ -1,0 +1,1352 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Irish+Grover&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap");
+body {
+  font-family: "Inter", "Irish Grover", serif;
+  width: 100%;
+  border: 0;
+  margin: 0;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  overflow: auto;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  background: none;
+  border: 0;
+}
+.header-div {
+  width: 100%;
+  height: fit-content;
+  padding-bottom: 35px;
+  position: relative;
+}
+.dropDownButton {
+  display: none;
+}
+
+/* Static Header */
+.static-header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  background-color: transparent;
+}
+
+.header-container {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px 56px;
+}
+
+#logo img {
+  height: 50px;
+}
+
+.header-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.header-nav ul li a {
+  color: #000000;
+  text-decoration: none;
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  position: relative; /* Required for the underline */
+  transition: color 0.3s ease;
+}
+
+/* Progress Underline Animation */
+.header-nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px; /* Adjust based on your design */
+  width: 0;
+  height: 2px;
+  background-color: #69d6f9;
+  transition: width 0.3s ease;
+}
+
+.header-nav ul li a:hover::after {
+  width: 100%; /* Full width on hover */
+}
+
+.header-nav ul li a:hover {
+  color: #69d6f9;
+}
+
+.downloadButton {
+  color: #000000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 155px;
+  height: 40px;
+  border-radius: 4px;
+  border-width: 1px;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid #000000;
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: 0%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.downloadButton:hover {
+  background-color: #69d6f9;
+}
+
+/* Fixed Header */
+.fixed-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1001;
+  transform: translateY(-100%);
+  transition: transform 1s ease;
+}
+
+.fixed-header.hidden {
+  transform: translateY(-100%); /* Hide smoothly when scrolling up */
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+.dropdown {
+  display: flex;
+  gap: 56px;
+  align-items: center;
+}
+.current {
+  color: #69d6f9 !important;
+}
+a {
+  transition: transform 0.3s ease-in-out;
+}
+
+a:hover {
+  transform: scale(1.1);
+}
+
+a:active {
+  transform: scale(0.95); /* Slightly shrink when clicked */
+}
+/* HEADER AREA ENDS HERE */
+
+/* SECTION1 STARTS HERE (HERO PAGE) */
+.section1 {
+  background-image: url(images/heroImage.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 97vh;
+  top: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 10%;
+  box-sizing: border-box;
+}
+.sec1div {
+}
+.title1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+}
+.section1 h1 {
+  font-family: Irish Grover;
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 96px;
+  letter-spacing: 0%;
+  padding-bottom: 24px;
+  text-align: center;
+}
+.section1 h2 {
+  font-family: Irish Grover;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 64px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+.ptext {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding-top: 6px;
+}
+.pdiv {
+  width: 100%;
+}
+.section1 p {
+  font-family: PT Serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+/* SECTION ONE ENDS HERE... */
+
+/* SECTION TWO STARTS HERE.. */
+.section2 {
+  width: 100%;
+  height: fit-content;
+  padding: 60px 50px;
+  gap: 12px;
+  box-sizing: border-box;
+}
+.abtFlex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.abtFlex h1 {
+  font-family: PT Serif;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 80px;
+  letter-spacing: 0%;
+}
+
+.abtFlex p {
+  font-family: Arial;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: 0%;
+}
+/* SECTION ENDS STARTS HERE.. */
+
+/* SECTION THREE STARTS HERE.. */
+
+.section3 {
+  width: 100%;
+  height: fit-content;
+  padding: 10px 60px;
+  box-sizing: border-box;
+  gap: 24px;
+}
+.sec3Flex {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+.title3 {
+  width: 100%;
+}
+.title3 h1 {
+  font-family: Inter;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 50px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+.title3 p {
+  font-family: Inter;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: 0%;
+  text-align: center;
+  padding-bottom: 24px;
+}
+.innerboxes {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 518px;
+  height: 70px;
+  border-radius: 10px;
+  gap: 12px;
+  padding: 10px;
+  background: #69d6f9;
+}
+.innerboxdiv {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.innerboxes h3 {
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22.5px;
+  letter-spacing: 0%;
+}
+.innerboxes p {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22.5px;
+  letter-spacing: 0%;
+}
+
+.flex2 .p1 {
+  font-family: Arial;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: 0%;
+  padding-bottom: 50px;
+}
+.location {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.location h4 {
+  font-family: Arial;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0%;
+}
+.flex2 .p2 {
+  font-family: Arial;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0%;
+}
+.flex2 a {
+  display: flex;
+  align-items: center;
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0%;
+  text-align: center;
+  margin-top: 12px;
+  text-decoration: none;
+  color: #000000;
+  border: 1px solid #000000;
+  width: 148px;
+  height: 40px;
+  border-radius: 4px;
+  border-width: 1px solid #000000;
+  gap: 8px;
+  justify-content: center;
+  padding: 10px;
+}
+.sketchdiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 400px;
+  perspective: 1000px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Cube */
+.cube {
+  width: 300px;
+  height: 300px;
+  position: relative; /* ✅ Remove absolute to allow flex centering */
+  transform-style: preserve-3d;
+  transform: rotateX(0deg) rotateY(0deg);
+  transition: transform 1s ease-in-out;
+}
+
+/* Faces of the cube */
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Position each face in 3D space */
+.front {
+  transform: translateZ(150px);
+} /* Forward */
+.back {
+  transform: rotateY(180deg) translateZ(150px);
+} /* Back */
+.right {
+  transform: rotateY(90deg) translateZ(150px);
+} /* Right */
+.left {
+  transform: rotateY(-90deg) translateZ(150px);
+} /* Left */
+.top {
+  transform: rotateX(90deg) translateZ(150px);
+} /* Top */
+.bottom {
+  transform: rotateX(-90deg) translateZ(150px);
+} /* Bottom */
+
+.sketch {
+  width: 300px;
+  height: 300px;
+}
+
+/* SECTION ENDS STARTS HERE.. */
+
+/* SECTION FOUR STARTS HERE.. */
+.section4 {
+  width: 100%;
+  height: 598;
+  padding: 24px 60px;
+  box-sizing: border-box;
+}
+.title4 {
+  width: 100%;
+  text-align: center;
+}
+.title4 h1 {
+  font-family: Inter;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 50px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+.title4 h3 {
+  font-family: Inter;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: 0%;
+  text-align: center;
+  padding-top: 12px;
+}
+.title4 p {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: 0%;
+  text-align: center;
+  padding-top: 12px;
+}
+.flexboxes {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  padding-top: 24px;
+}
+.boxes {
+  width: 360px;
+  height: 332px;
+  gap: 24px;
+  padding: 20px;
+  background: #dad9d9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.boxes h1 {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+.boxes p {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+/* SECTION FOUR ENDS HERE.. */
+
+/* SECTION FIVE STARTS HERE.. */
+.section5 {
+  width: 100%;
+  height: fit-content;
+  padding: 10px 60px;
+  box-sizing: border-box;
+}
+.title5 h1 {
+  font-family: Inter;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 50px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+.title5 h3 {
+  font-family: Inter;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+.project1 img {
+  width: 100%;
+  box-sizing: border-box;
+}
+.project1img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.project1 {
+  width: 100%;
+  box-sizing: border-box;
+  height: fit-content;
+}
+.titlediv {
+  display: flex;
+  gap: 10px;
+  box-sizing: border-box;
+  padding-top: 10px;
+}
+.titlediv p {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0%;
+  width: fit-content;
+  padding: 10px;
+  border: 1px solid #000000;
+}
+.projectdetails h1 {
+  font-family: Inter;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 60px;
+  letter-spacing: 0%;
+}
+.projectdetails p {
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0%;
+}
+.project-flex {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  justify-content: center;
+}
+.project-flex a {
+  width: 100%;
+}
+.project2 img {
+  width: 100%;
+}
+
+.project2 {
+  width: 100%;
+}
+.project3 img {
+  width: 100%;
+}
+.project3 {
+  width: 100%;
+}
+.section5 a {
+  height: fit-content;
+  width: 100%;
+  display: inline-block; /* Ensures the element can be animated */
+  animation: burble 1.5s ease-in-out infinite; /* Apply the animation */
+}
+
+@keyframes burble {
+  0%, 100% {
+    transform: scale(0.9); /* Normal size */
+  }
+  50% {
+    transform: scale(0.97); /* Slightly larger size */
+  }
+}
+.section5 a:hover {
+  transform: scale(0.90);
+}
+/* SECTION FIVE ENDS HERE.. */
+
+/* SECTION SIX STARTS HERE.. */
+.section6 {
+  width: 100%;
+  padding: 24px 60px;
+  box-sizing: border-box;
+}
+.title6 h1 {
+  font-family: Inter;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 50px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+.title6 h3 {
+  font-family: Inter;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: 0%;
+  text-align: center;
+  padding-bottom: 12px;
+}
+.sec6flex-container {
+  width: 100%;
+  display: flex;
+  padding: 39px 0px;
+  gap: 24px;
+  padding-top: 24px;
+}
+.details {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 56px;
+}
+.form-div {
+  width: 100%;
+}
+.details input {
+  width: 402.5;
+  height: 60;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  gap: 10px;
+  border-bottom: 1px solid #000000;
+}
+form {
+  width: 100%;
+}
+.textbox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+textarea {
+  width: 100%;
+  height: 120px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  gap: 10px;
+  border-bottom: 1px solid #000000;
+  resize: none;
+}
+.message1 {
+  padding-top: 24px;
+}
+.submit {
+  width: 120px;
+  height: 40px;
+  border-radius: 4px;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  gap: 2px;
+  border: 1px solid #000000;
+  background-color: #000000;
+  color: #ffffff;
+  margin-top: 24px;
+}
+.contact-box {
+  width: 50%;
+  box-sizing: border-box;
+}
+.contact-link {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+.social-link {
+  padding-bottom: 48px;
+}
+.social-link a {
+  display: flex;
+  text-decoration: none;
+  color: #000000;
+  gap: 10px;
+  align-items: center;
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: 0%;
+}
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.links p {
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: 0%;
+}
+.footer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-arrow {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.footer2 {
+  display: none;
+}
+@media screen and (max-width: 950px) {
+  #logo img {
+    width: 140px;
+    height: 20px;
+  }
+  .nav-div {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 97%;
+    transform: translateX(-50%);
+    background: #ffffff;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+
+    /* Initially hidden */
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out;
+  }
+
+  .nav-div.active {
+    max-height: 300px; /* Adjust based on content height */
+    opacity: 1;
+  }
+
+  .header-nav ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+  }
+  .header-nav ul li {
+    border: 1px solid #0000004d;
+    width: 100%;
+    text-align: center;
+    padding: 8px;
+    border-radius: 4px;
+    background: #f6f4e9;
+  }
+  .dropDownButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center spans horizontally */
+    justify-content: center; /* Center spans vertically */
+    gap: 2px;
+    position: relative; /* Required for absolute positioning of child spans */
+    width: 30px; /* Adjust as needed */
+    height: 30px; /* Adjust as needed */
+    /* Prevent spans from overflowing */
+  }
+
+  .dropDownButton span {
+    display: block; /* Ensure spans are visible */
+    width: 30px; /* Adjust as needed */
+    height: 2px; /* Adjust as needed */
+    background-color: black; /* For visibility */
+    position: absolute; /* Remove spans from document flow */
+    transition: transform 0.3s ease, opacity 0.3s ease, top 0.3s ease,
+      left 0.3s ease;
+  }
+
+  /* Optional: Add styles to visualize the spans */
+  .dropDownButton .span1 {
+    background-color: #000000;
+    top: 5px;
+  }
+  .dropDownButton .span2 {
+    background-color: #000000;
+  }
+  .dropDownButton .span3 {
+    background-color: #000000;
+    bottom: 5px;
+  }
+
+  .buttonArea {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .downloadButton {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0%;
+    text-align: center;
+    width: 89px;
+    padding-top: 8px;
+    padding-right: 6px;
+    padding-bottom: 8px;
+    padding-left: 6px;
+    gap: 10px;
+    border-width: 1px;
+    border-radius: 2px;
+    height: fit-content;
+  }
+  .header-container {
+    width: 100%;
+    height: 43px;
+    top: 50px;
+    justify-content: space-between;
+    padding: 6px 16px;
+  }
+
+  /* HEADER AREA ENDS HERE */
+
+  /* SECTION ONE STARTS HERE... */
+  .section1 {
+    padding: 30px 16px;
+    width: 100%;
+    height: 94vh;
+    background-image: url(images/mobile-hero.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  h1.typing-h1 {
+    font-family: Irish Grover;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: 0%;
+    text-align: center;
+  }
+  h2.typing-h2 {
+    font-family: Irish Grover;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: center;
+  }
+  .pdiv p {
+    font-family: PT Serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 10px;
+    line-height: 12.5px;
+    letter-spacing: 0%;
+    text-align: center;
+  }
+
+  /* SECTION ONE ENDS HERE... */
+
+  /* SECTION TWO STARTS HERE.... */
+  .section2 {
+    padding: 6px 16px;
+  }
+  .abtFlex {
+    flex-direction: column;
+  }
+  .section2 h1 {
+    font-family: PT Serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: 0%;
+  }
+  .section2 p {
+    font-family: Arial;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0%;
+  }
+  .abtFlex img {
+    width: 277px;
+    height: 241px;
+  }
+
+  /* SECTION2 ENDS HERE... */
+
+  /* SECTION3 STARTS HERE... */
+
+  .section3 {
+    padding: 6px 16px;
+  }
+  .title3 h1 {
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: center;
+  }
+  .title3 {
+    width: 100%;
+  }
+  .title3 p {
+    width: 100%;
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17.5px;
+    letter-spacing: 0%;
+    text-align: center;
+    padding-bottom: 4px;
+  }
+  .sec3Flex {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+  .flex1 {
+    box-sizing: border-box;
+  }
+  .innerboxes img {
+    width: 12px;
+    height: 12px;
+    border-width: 1px;
+    border-radius: 50px;
+  }
+  .innerboxes {
+    width: 100%;
+    height: 46px;
+    padding-top: 8px;
+    padding-right: 6px;
+    padding-bottom: 8px;
+    padding-left: 6px;
+    gap: 6px;
+    border-radius: 6px;
+    box-sizing: border-box;
+  }
+  .innerboxes h3 {
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0%;
+  }
+  .innerboxdiv {
+    gap: 4px;
+  }
+  .innerboxes p {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12.5px;
+    letter-spacing: 0%;
+  }
+
+  .sketchdiv {
+    width: 100%; /* Full width of the screen */
+    height: 300px; /* Reduced height for mobile */
+    perspective: 800px; /* Adjust perspective for smaller screens */
+  }
+
+  .cube {
+    width: 200px; /* Smaller cube for mobile */
+    height: 200px;
+  }
+
+  .front,
+  .back,
+  .right,
+  .left,
+  .top,
+  .bottom {
+    transform: translateZ(100px); /* Adjust translateZ for smaller cube */
+  }
+
+  .back {
+    transform: rotateY(180deg) translateZ(100px);
+  }
+  .right {
+    transform: rotateY(90deg) translateZ(100px);
+  }
+  .left {
+    transform: rotateY(-90deg) translateZ(100px);
+  }
+  .top {
+    transform: rotateX(90deg) translateZ(100px);
+  }
+  .bottom {
+    transform: rotateX(-90deg) translateZ(100px);
+  }
+
+  .sketch {
+    width: 200px; /* Smaller image for mobile */
+    height: 200px;
+  }
+}
+  .flex2 .p1 {
+    font-family: Arial;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0%;
+    padding-bottom: 12px;
+  }
+  .location h4 {
+    font-family: Arial;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0%;
+  }
+  .location .p2 {
+    font-family: Arial;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0%;
+  }
+  .flex2 a {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0%;
+    text-align: center;
+    width: 74px;
+    height: 31px;
+    padding-top: 6px;
+    padding-right: 6px;
+    padding-bottom: 6px;
+    padding-left: 6px;
+    gap: 2px;
+    border-width: 1px;
+    border-radius: 2px;
+  }
+  .flex2 a img {
+    width: 12px;
+    height: 12px;
+  }
+
+  /* SECTION THREE ENDS HERE... */
+
+  /* SECTION FOUR STARTS HERE.. */
+
+  .section4 {
+    padding: 6px 16px;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  .title4 h1 {
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: center;
+  }
+  .title4 h3 {
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17.5px;
+    letter-spacing: 0%;
+    text-align: center;
+    padding-top: 6px;
+  }
+  .title4 p {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0%;
+    text-align: left;
+    padding-top: 6px;
+  }
+  .flexboxes {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    width: 100%;
+    scroll-snap-type: x mandatory;
+    gap: 14px;
+  }
+
+  .boxes {
+    flex-shrink: 0;
+    width: 240px;
+    height: 200px;
+    background: lightgray;
+    transition: transform 0.3s ease-in-out;
+    scroll-snap-align: center;
+    box-sizing: border-box;
+    text-wrap: wrap;
+    gap: 12px;
+    padding: 6px;
+    margin: 0px 1px;
+  }
+  .boxes.active {
+    transform: scale(1.1);
+  }
+
+  .boxes img {
+    width: 30px;
+    height: 30px;
+  }
+  .boxes h1 {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17.5px;
+    letter-spacing: 0%;
+    text-align: center;
+  }
+  .boxes p {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12.5px;
+    letter-spacing: 0%;
+    text-align: center;
+  }
+  .lastbox {
+    margin: auto;
+  }
+
+  /* SECTION FOUR ENDS HERE.. */
+
+  /* SECTION FIVE ENDS HERE... */
+  .section5 {
+    padding: 6px 16px;
+  }
+  .title5 h1 {
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: center;
+  }
+  .title5 h3 {
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17.5px;
+    letter-spacing: 0%;
+    text-align: center;
+    padding-bottom: 6px;
+  }
+  .project1img img {
+    width: 100%;
+  }
+
+  .titlediv p {
+    width: fit-content;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12.5px;
+    letter-spacing: 0%;
+    height: fit-content;
+  }
+  .projectdetails h1 {
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0%;
+  }
+  .projectdetails {
+    padding-bottom: 6px;
+  }
+  .projectdetails p {
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 13.75px;
+    letter-spacing: 0%;
+  }
+  .project2img img {
+    width: 100%;
+    height: 100%;
+  }
+  .project-flex {
+    width: 100%;
+    gap: 10px;
+    justify-content: center;
+    box-sizing: border-box;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .project2 {
+    width: 100%;
+  }
+  .project3img img {
+    width: 100%;
+  }
+  .project3 {
+    width: 100%;
+  }
+  .section6 {
+    padding: 6px 16px;
+    height: fit-content;
+    padding-bottom: 0px;
+  }
+  .title6 h1 {
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 125%;
+    letter-spacing: 0%;
+    text-align: center;
+  }
+  .title6 h3 {
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 114.99999999999999%;
+    letter-spacing: 0%;
+    text-align: center;
+  }
+  .sec6flex-container {
+    flex-direction: column;
+  }
+  .form-div {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .details {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .contact-box {
+    width: 100%;
+    display: flex;
+    height: 43px;
+    align-items: center;
+    gap: 2px;
+    padding: 0;
+    justify-content: center;
+  }
+  textarea {
+    height: 75px;
+    padding: 6px 4px;
+  }
+  .textbox input {
+    height: 27px;
+    padding: 6px 4px;
+  }
+  .message1 {
+    padding-top: 0px;
+  }
+  .social-link img {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+  }
+  .social-link {
+    gap: 6px;
+    padding: 0;
+    padding-right: 2px;
+    height: 100%;
+  }
+  .links a img {
+    width: 9.6px;
+    height: 9.6px;
+  }
+  .links {
+    gap: 3px;
+  }
+  .links a {
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 125%;
+    letter-spacing: 0%;
+    gap: 2px;
+  }
+  .contact-link img {
+    width: 25.88px;
+    height: 25.83px;
+  }
+  .links p {
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 125%;
+    letter-spacing: 0%;
+  }
+  .contact-link {
+    gap: 3px;
+    padding-right: 4px;
+    border-right: 1px solid #000000 !important;
+
+    height: 100%;
+  }
+  .footer2 {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+  .footer2 p {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 125%;
+    letter-spacing: 0%;
+    flex-wrap: nowrap;
+  }
+  .footer {
+    display: none;
+  }
+  .footer-arrow {
+    flex-wrap: nowrap;
+  }
+}
