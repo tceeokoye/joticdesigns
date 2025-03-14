@@ -294,4 +294,18 @@ function redirectToEmail(event) {
     subject
   )}&body=${encodeURIComponent(body)}`;
 }
-console.log(redirectToEmaill)
+
+
+window.addEventListener("load", function () {
+  const preloader = document.querySelector(".loaderdiv");
+  const content = document.querySelector(".content");
+
+  
+
+  // Hide preloader after 3 seconds (simulate loading)
+  setTimeout(() => {
+    preloader.style.opacity = "0";
+    preloader.style.display = "none";
+    content.style.display = "block";
+  }, 3000); // Adjust time as needed
+});
