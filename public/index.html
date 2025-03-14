@@ -296,7 +296,7 @@
         </div>
         <div class="sec6flex-container">
           <div class="form-div">
-            <form action="">
+            <form onsubmit="redirectToEmail(event)">
               <div class="details">
                 <div class="textbox">
                   <label for="names">Your Name</label>
@@ -311,7 +311,7 @@
                 <label for="message">Your Message</label>
                 <textarea name="message" id="message" required></textarea>
               </div>
-              <button class="submit">Send</button>
+              <button type="submit" class="submit">Send</button>
             </form>
           </div>
           <div class="contact-box">

@@ -16,14 +16,14 @@ window.addEventListener("scroll", () => {
 
 // Get the current year
 const currentYear = new Date().getFullYear();
-  
+
 // Find the span element with the class 'year' and set its text content to the current year
-document.querySelector('.year').textContent = currentYear;
+document.querySelector(".year").textContent = currentYear;
 const dropbutton = document.querySelectorAll(".dropDownButton");
 const dropscreen = document.querySelectorAll(".nav-div");
 
 dropbutton.forEach((button) => {
-  button.addEventListener("click", function(event) {
+  button.addEventListener("click", function (event) {
     event.preventDefault();
 
     dropscreen.forEach((screen) => {
@@ -69,14 +69,14 @@ const project = document.querySelectorAll(".projects");
 const contact = document.querySelectorAll(".contacts");
 
 home.forEach((button) => {
-  button.addEventListener("click", function(event) {
+  button.addEventListener("click", function (event) {
     event.preventDefault(); // Prevent the default behavior (e.g., following a link)
     location.reload(); // Reload the page
   });
 });
 
 about.forEach((button) => {
-  button.addEventListener("click", function(event) {
+  button.addEventListener("click", function (event) {
     event.preventDefault(); // Prevent default behavior (e.g., following a link)
 
     // Find the "About Us" section by its ID
@@ -110,9 +110,8 @@ about.forEach((button) => {
   });
 });
 
-
 service.forEach((button) => {
-  button.addEventListener("click", function(event) {
+  button.addEventListener("click", function (event) {
     event.preventDefault(); // Prevent default behavior (e.g., following a link)
 
     // Find the "About Us" section by its ID
@@ -146,9 +145,8 @@ service.forEach((button) => {
   });
 });
 
-
 project.forEach((button) => {
-  button.addEventListener("click", function(event) {
+  button.addEventListener("click", function (event) {
     event.preventDefault(); // Prevent default behavior (e.g., following a link)
 
     // Find the "About Us" section by its ID
@@ -183,7 +181,7 @@ project.forEach((button) => {
 });
 
 contact.forEach((button) => {
-  button.addEventListener("click", function(event) {
+  button.addEventListener("click", function (event) {
     event.preventDefault(); // Prevent default behavior (e.g., following a link)
 
     // Find the "About Us" section by its ID
@@ -228,21 +226,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const flexboxContainer = document.querySelector(".flexboxes");
 
   function checkCenterBox() {
-      if (window.innerWidth > 950) return; // Exit if not mobile
+    if (window.innerWidth > 950) return; // Exit if not mobile
 
-      let centerX = flexboxContainer.clientWidth / 2; // Get container center
+    let centerX = flexboxContainer.clientWidth / 2; // Get container center
 
-      boxes.forEach(box => {
-          let boxRect = box.getBoundingClientRect();
-          let boxCenterX = boxRect.left + boxRect.width / 2; // Find box center
+    boxes.forEach((box) => {
+      let boxRect = box.getBoundingClientRect();
+      let boxCenterX = boxRect.left + boxRect.width / 2; // Find box center
 
-          // If box center is near container center, apply scaling
-          if (Math.abs(centerX - boxCenterX) < boxRect.width / 2) {
-              box.classList.add("active");
-          } else {
-              box.classList.remove("active");
-          }
-      });
+      // If box center is near container center, apply scaling
+      if (Math.abs(centerX - boxCenterX) < boxRect.width / 2) {
+        box.classList.add("active");
+      } else {
+        box.classList.remove("active");
+      }
+    });
   }
 
   // Run function on scroll (Only for mobile)
@@ -252,33 +250,48 @@ document.addEventListener("DOMContentLoaded", () => {
   checkCenterBox();
 });
 
-
 document.addEventListener("DOMContentLoaded", () => {
   const cube = document.querySelector(".cube");
   let xRotation = 0;
   let yRotation = 0;
   let currentFace = 0;
-  
+
   function rotateCube() {
-      const rotations = [
-          [0, 0],      // Front
-          [0, 180],    // Back
-          [0, 90],     // Right
-          [0, -90],    // Left
-          [90, 0],     // Top
-          [-90, 0]     // Bottom
-      ];
+    const rotations = [
+      [0, 0], // Front
+      [0, 180], // Back
+      [0, 90], // Right
+      [0, -90], // Left
+      [90, 0], // Top
+      [-90, 0], // Bottom
+    ];
 
-      xRotation = rotations[currentFace][0];
-      yRotation = rotations[currentFace][1];
+    xRotation = rotations[currentFace][0];
+    yRotation = rotations[currentFace][1];
 
-      cube.style.transform = `rotateX(${xRotation}deg) rotateY(${yRotation}deg)`;
+    cube.style.transform = `rotateX(${xRotation}deg) rotateY(${yRotation}deg)`;
 
-      currentFace = (currentFace + 1) % 6;
+    currentFace = (currentFace + 1) % 6;
   }
 
   setInterval(rotateCube, 3000);
 });
 
+function redirectToEmail(event) {
+  event.preventDefault(); // Fix: Add parentheses to call the function
 
+  // Getting form data
+  const name = document.getElementById("name-input").value;
+  const email = document.getElementById("email-input").value;
+  const message = document.getElementById("message").value;
 
+  // Composing the email subject and body
+  const subject = `Message from ${name}`;
+  const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0AMessage: ${message}`; // Fix: Removed extra space
+
+  // Redirect to the user's email client
+  window.location.href = `mailto:jamesojo67@gmail.com?subject=${encodeURIComponent(
+    subject
+  )}&body=${encodeURIComponent(body)}`;
+}
+console.log(redirectToEmaill)
