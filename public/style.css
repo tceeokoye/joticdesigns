@@ -272,6 +272,8 @@ a:active {
   box-sizing: border-box;
 }
 .sec1div {
+  width: 100%;
+  box-sizing: border-box;
 }
 .title1 {
   display: flex;
@@ -972,6 +974,7 @@ textarea {
     line-height: 32px;
     letter-spacing: 0%;
     text-align: center;
+    max-width: 100%;
   }
   h2.typing-h2 {
     font-family: Irish Grover;
@@ -980,6 +983,9 @@ textarea {
     line-height: 20px;
     letter-spacing: 0%;
     text-align: center;
+    max-width: 100%;
+    box-sizing: border-box;
+    text-wrap: wrap;
   }
   .pdiv p {
     font-family: PT Serif;
