@@ -287,7 +287,7 @@ function redirectToEmail(event) {
 
   // Composing the email subject and body
   const subject = `Message from ${name}`;
-  const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0AMessage: ${message}`; // Fix: Removed extra space
+  const body = `Name: ${name}\nEmail: ${email}\nMessage: ${message}`; // Fix: Removed extra space
 
   // Redirect to the user's email client
   window.location.href = `mailto:jamesojo67@gmail.com?subject=${encodeURIComponent(
@@ -308,4 +308,11 @@ window.addEventListener("load", function () {
     preloader.style.display = "none";
     content.style.display = "block";
   }, 3000); // Adjust time as needed
+});
+
+document.getElementById('scrollToTopBtn').addEventListener('click', function() {
+  window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // Optional: Adds a smooth scrolling effect
+  });
 });

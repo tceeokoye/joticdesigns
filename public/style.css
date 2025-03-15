@@ -335,6 +335,7 @@ a:active {
   font-size: 64px;
   line-height: 80px;
   letter-spacing: 0%;
+  text-align: left;
 }
 
 .abtFlex p {
@@ -343,6 +344,7 @@ a:active {
   font-size: 32px;
   line-height: 40px;
   letter-spacing: 0%;
+  text-align: left;
 }
 /* SECTION ENDS STARTS HERE.. */
 
@@ -354,6 +356,7 @@ a:active {
   padding: 10px 60px;
   box-sizing: border-box;
   gap: 24px;
+  text-align: left;
 }
 .sec3Flex {
   display: flex;
@@ -538,6 +541,7 @@ a:active {
   line-height: 50px;
   letter-spacing: 0%;
   text-align: center;
+
 }
 .title4 h3 {
   font-family: Inter;
@@ -602,6 +606,7 @@ a:active {
   height: fit-content;
   padding: 10px 60px;
   box-sizing: border-box;
+  text-align: left;
 }
 .title5 h1 {
   font-family: Inter;
@@ -711,6 +716,7 @@ a:active {
   width: 100%;
   padding: 24px 60px;
   box-sizing: border-box;
+  text-align: left;
 }
 .title6 h1 {
   font-family: Inter;
