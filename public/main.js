@@ -309,10 +309,13 @@ window.addEventListener("load", function () {
     content.style.display = "block";
   }, 3000); // Adjust time as needed
 });
+const scrollUp = document.querySelectorAll(".arrow-up")
 
-document.getElementById('scrollToTopBtn').addEventListener('click', function() {
-  window.scrollTo({
-      top: 0,
-      behavior: 'smooth' // Optional: Adds a smooth scrolling effect
+scrollUp.forEach((button) =>{
+  button.addEventListener('click', function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Optional: Adds a smooth scrolling effect
+    });
   });
-});
+})

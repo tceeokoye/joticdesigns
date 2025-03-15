@@ -57,16 +57,17 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("load", revealOnScroll);
 
   window.addEventListener("load", () => {
+    const section1 = document.querySelector(".section1"); // Ensure this matches your section1's ID
     const h1Text = "Welcome!";
     const h2Text = "Experience exceptional services.";
-
+  
     const h1Element = document.querySelector(".typing-h1");
     const h2Element = document.querySelector(".typing-h2");
     const pdiv = document.querySelector(".pdiv"); // The paragraph div to fly in
-
+  
     let h1Index = 0;
     let h2Index = 0;
-
+  
     function typeH1() {
       if (h1Index < h1Text.length) {
         h1Element.innerHTML += h1Text[h1Index];
@@ -80,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 500); // Pause before typing h2
       }
     }
-
+  
     function typeH2() {
       if (h2Index < h2Text.length) {
         h2Element.innerHTML += h2Text[h2Index];
@@ -93,12 +94,29 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 500); // Short pause before paragraph flies in
       }
     }
-
+  
     // Setup initial styles
     h1Element.classList.add("blinking-cursor"); // Start h1 with blinking cursor
     h2Element.style.display = "none"; // Hide h2 until it's ready to type
     pdiv.classList.remove("visible"); // Make sure pdiv is hidden initially
-
-    typeH1(); // Start typing sequence
+  
+    // Intersection Observer to detect when section1 is in view
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Start typing animation when section1 is in view
+            typeH1();
+            observer.unobserve(section1); // Stop observing after triggering
+          }
+        });
+      },
+      {
+        threshold: 0.5, // Trigger when 50% of section1 is visible
+      }
+    );
+  
+    // Start observing section1
+    observer.observe(section1);
   });
 });

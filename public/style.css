@@ -843,6 +843,9 @@ textarea {
 .footer2 {
   display: none;
 }
+.arrow-up{
+  background: none;
+}
 @media screen and (max-width: 950px) {
   #logo img {
     width: 140px;
